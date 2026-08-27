@@ -3,12 +3,14 @@ Controle de irrigação de hortaliças para apartamentos ou pequenos espaços.
 
 O Smart Horta é um projeto de automação desenvolvido em C++ para o microcontrolador ESP8266. Sua arquitetura modular gerencia o acionamento de uma bomba d'água através de um relé, oferecendo uma interface web embutida para controle manual e programação de regas diárias automáticas baseadas em horário real (NTP). O sistema também calcula e exibe estatísticas de uso, como número de acionamentos e estimativa de volume de água (litros) consumido.
  
-PS: até o momento deste commit, há apenas a opção de irrigar uma vez ao dia. Nessa opção, todos os dias, o sistema é acionado no horário definido.
+<div align="center">
+  <img src="img/example.png" alt="Tela do sistema" width="500">
+</div>
 
 # Instalação
-- Acesse o arquivo [config.h](config.h) e altere as credenciais do WiFi para as da sua rede.
+- Acesse o arquivo [config.h](src/smart_horta/config.h) e altere as credenciais do WiFi para as da sua rede.
 - Configure a Arduino IDE para sua placa NodeMCU.
-- Abra o arquivo [smart_horta.ino](smart_horta.ino) e compile o projeto enviando-o para seu NodeMCU.
+- Abra o arquivo [smart_horta.ino](src/smart_horta/smart_horta.ino) e compile o projeto enviando-o para seu NodeMCU.
 - Aguarde a conexão do NodeMCU com a rede WiFi _(você pode acompanhar os logs pelo monitor serial da própria Arduino IDE)_
 - Aguarde a inicialização do servidor NTP e a confirmação de aquisição de horário.
 - Acesse o IP gerado pelo sistema _(será o endereço da página web por onde controlará o sistema)_
@@ -22,6 +24,8 @@ Este módulo define regras de negócio e parâmetros definidos para a irrigaçã
 
 ### Timer
 Este módulo é responsável por garantir a automação da irrigação, proporcionando opções de programação para o usuário.
+
+> **Nota:** até o momento deste commit, há apenas a opção de irrigar uma vez ao dia. Nessa opção, todos os dias, o sistema é acionado no horário definido.
 
 ### WaterPump
 Este módulo cuida exclusivamente da manipulação do hardware da bomba d'água.
