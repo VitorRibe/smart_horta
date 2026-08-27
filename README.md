@@ -1,7 +1,8 @@
 # SMART HORTA 🌱
 Controle de irrigação de hortaliças para apartamentos ou pequenos espaços.
 
-É possível acionar manualmente, ou automatizar o processo de irrigação. 
+O Smart Horta é um projeto de automação desenvolvido em C++ para o microcontrolador ESP8266. Sua arquitetura modular gerencia o acionamento de uma bomba d'água através de um relé, oferecendo uma interface web embutida para controle manual e programação de regas diárias automáticas baseadas em horário real (NTP). O sistema também calcula e exibe estatísticas de uso, como número de acionamentos e estimativa de volume de água (litros) consumido.
+ 
 PS: até o momento deste commit, há apenas a opção de irrigar uma vez ao dia. Nessa opção, todos os dias, o sistema é acionado no horário definido.
 
 # Instalação
